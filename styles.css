@@ -1,8 +1,11 @@
+/* CSS RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* CSS ROOT VARIABLES FOR COLORS */
 
 :root {
   --background-white: rgba(245, 248, 250, 1);
@@ -19,12 +22,16 @@
   --terms-color-blue: rgba(49, 112, 143, 1);
 }
 
+/* BODY */
+
 body {
   width: 100wv;
   height: 100vh;
   background-color: var(--background-white);
   font-family: 'Lato', sans-serif;
 }
+
+/* BODY WRAPPER A DIRECT CHILD OF BODY ELEMENT */
 
 .body-wrapper {
   width: 1440px;
@@ -34,7 +41,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* HEADER, NAV STYLES */
+/* HEADER, NAVIGATION STYLES */
 .nav-bar {
   width: 1360px;
   height: 73px;
@@ -85,11 +92,14 @@ body {
   display: flex;
 }
 
+/* LEFT CONTAINER */
 .left-container {
   width: 580px;
   height: 795px;
   font-family: 'Lato', sans-serif;
 }
+
+/* LEFT CONTAINER H1 */
 
 .left-container h1 {
   width: 161px;
@@ -104,6 +114,8 @@ body {
   margin-inline-start: 48px;
   margin-block-end: 24px;
 }
+
+/* LEFT CONTAINER BOX 1 */
 
 .basic-info {
   border-block: 2px solid var(--light-grey);
@@ -178,6 +190,8 @@ body {
   width: 484px;
 }
 
+/* LEFT CONTAINER BOX 2 */
+
 .left-container .box2 {
   margin-block-start: 33px;
 }
@@ -237,24 +251,25 @@ body {
   font-size: 14px;
   font-weight: 700;
   color: var(--dark-font-color);
-
-  > span {
-    font-weight: 400;
-    color: var(--nav-border);
-
-    a {
-      color: var(--nav-border);
-      text-decoration-color: var(--nav-border);
-    }
-  }
 }
 
-.by-stripe {
+.support > span {
+  font-weight: 400;
+  color: var(--nav-border);
+}
+
+.support span >  a {
+  color: var(--nav-border);
+  text-decoration-color: var(--nav-border);
+}
+
+.by-stripe img {
   width: 92px;
   height: 20.101px;
   margin-inline-start: 210px;
 }
 
+/* RIGHT CONTAINER */
 .right-container {
   width: 312px;
   height: 795px;
@@ -263,130 +278,138 @@ body {
   font-family: 'Lato', sans-serif;
   padding-block-start: 42px;
   padding-inline: 44px;
-
-  > .box3 {
-    padding-block-end: 42px;
-    border-block-end: 2px solid var(--white-text);
-
-    > .freelancer {
-      color: var(--white-text);
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    > .price-details {
-      padding-block-end: 3px;
-
-      > .price {
-        display: flex;
-        gap: 10px;
-        vertical-align: top;
-        margin-block-start: 18px;
-
-        > .dollar-sign {
-          width: 14px;
-          height: 29px;
-        }
-
-        > .per-year {
-          width: 121px;
-          height: 72px;
-        }
-      }
-    }
-
-    > .auto-renew {
-      width: 160px;
-      line-height: 24px;
-      margin-block-start: 10px;
-      font-size: 16px;
-      font-weight: 400;
-      margin-block-end: 36px;
-    }
-
-    > .box3-flex {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
-
-    .middle {
-      padding-block: 16px;
-    }
-
-    > .agency-plan {
-      margin-block-start: 38px;
-      color: var(--white-text);
-
-      > p {
-        font-size: 16px;
-        font-weight: 400;
-        margin-block-end: 12px;
-
-        > span {
-          font-weight: 700;
-        }
-      }
-
-      > a {
-        color: var(--white-text);
-        font-size: 16px;
-        font-weight: 700;
-
-        > span {
-          font-style: italic;
-        }
-      }
-    }
-  }
-
-  > .box4 {
-    padding-block-start: 41px;
-
-    > .box4-p-wrapper {
-      padding-inline-start: 2px;
-
-      > p {
-        font-size: 18px;
-        font-weight: 400;
-        font-style: italic;
-        line-height: 24px;
-
-        > span {
-          font-weight: 700;
-        }
-      }
-    }
-
-    > .img-name {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-block-start: 27px;
-
-      > img {
-        border-radius: 50%;
-      }
-
-      > p {
-        font-size: 16px;
-        font-weight: 700;
-      }
-    }
-  }
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
+/* RIGHT CONTAINER BOX 3 */
+.right-container > .box3 {
+  padding-block-end: 42px;
+  border-block-end: 2px solid var(--white-text);
+}
+
+.box3 > .freelancer {
+  color: var(--white-text);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.box3 > .price-details {
+  margin-block-start: 18px;
+  padding-block-end: 3px;
+}
+
+.price-details > .price {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.price-details .price > .dollar-sign {
+  width: 14px;
+  height: 29px;
+}
+
+.price-details .price > .per-year {
+  width: 121px;
+  height: 72px;
+}
+
+.box3 > .auto-renew {
+  width: 160px;
+  line-height: 24px;
+  margin-block-start: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-block-end: 36px;
+}
+
+.box3 > .box3-flex {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.box3 .middle {
+  padding-block: 16px;
+}
+
+.agency-plan {
+  margin-block-start: 38px;
+  color: var(--white-text);
+}
+
+.agency-plan > p {
+    font-size: 16px;
+    font-weight: 400;
+    padding-block-end: 8px;
+}
+
+.agency-plan p > span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.agency-plan > a {
+  color: var(--white-text);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.agency-plan a > span {
+  font-style: italic;
+}
+
+/* RIGHT CONTAINER BOX 4 */
+.right-container > .box4 {
+  padding-block-start: 41px;
+}
+
+.box4 > .box4-p-wrapper {
+  padding-inline-start: 2px;
+}
+
+.box4-p-wrapper > p {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 24px;
+}
+
+.box4-p-wrapper p > span {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.box4 > .img-name {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-block-start: 27px;
+}
+
+.box4 .img-name > img {
+  border-radius: 50%;
+}
+
+.box4 .img-name > p {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* BOTTOM FOOTER TERM LINK */
 .terms {
   text-align: center;
   margin-block-start: 33px;
+}
 
-  > p {
-    color: var(--terms-color-grey);
-    font-size: 14px;
-    font-weight: 400;
+.terms > p {
+  color: var(--terms-color-grey);
+  font-size: 14px;
+  font-weight: 400;
+}
 
-    > a {
-      color: var(--terms-color-blue);
-    }
-  }
+.terms p > a {
+  color: var(--terms-color-blue);
 }
